@@ -1,0 +1,11 @@
+<Widget>
+  <Header>
+    <Title>
+      <Text>Stores</Text>
+      <Styles>
+        <color>#333333</color>
+        <text-align>left</text-align>
+      </Styles>
+    </Title>
+  </Header>
+</Widget>

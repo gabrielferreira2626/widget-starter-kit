@@ -40,7 +40,9 @@ interface WidgetProperties {
  power_widgetsid: string;
  power_name: string;
  power_description: string;
- power_code: string;
+ power_xml_header: string;
+ power_xml_elements: string;
+ power_xml_footer: string;
  power_actions: string;
 }
 
@@ -54,7 +56,7 @@ class WidgetElement {
   this.properties = properties;
   this.id = this.properties.power_widgetsid;
 
-  const {document: template} = useXML(this.properties.power_code);
+  const {document: template} = useXML(this.properties.power_xml_header + this.properties.power_xml_elements + this.properties.power_xml_footer);
   const {document: actions} = useXML(this.properties.power_actions);
 
   this.template = template;
