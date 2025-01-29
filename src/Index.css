@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-avocado-600: oklch(0.53 0.12 118.34);
+}
+
+.my-background {
+ background-color: red;
+}

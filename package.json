@@ -9,8 +9,10 @@
   "dependencies": {
     "@paciolan/remote-component": "^2.13.0",
     "@powerdashboards/utils": "^1.1.0",
+    "@tailwindcss/vite": "^4.0.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

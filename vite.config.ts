@@ -3,9 +3,11 @@ import react from "@vitejs/plugin-react";
 import zipPack from "vite-plugin-zip-pack";
 import {viteStaticCopy} from "vite-plugin-static-copy";
 import { name, version } from "./package.json";
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
  plugins: [
+  tailwindcss(),
   react(),
   viteStaticCopy({
    targets: [{src: "./src/WidgetManisfest.xml", dest: "."}],
@@ -17,6 +19,7 @@ export default defineConfig({
    outFileName: `${name}-${version}.zip`,
   }),
  ],
+ 
  build: {
   lib: {
    entry: "./src/Index.tsx",

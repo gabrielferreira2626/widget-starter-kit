@@ -2,8 +2,6 @@ import React, {createContext, useContext} from "react";
 
 interface WidgetContextProps {
  id: string;
- template: XMLDocument | null;
- actions: XMLDocument | null;
 }
 
 const WidgetContext = createContext<WidgetContextProps | undefined>(undefined);
@@ -22,5 +20,7 @@ interface WidgetProviderProps {
 }
 
 export const WidgetProvider: React.FC<WidgetProviderProps> = ({value, children}) => (
- <WidgetContext.Provider value={value}>{children}</WidgetContext.Provider>
+ <WidgetContext.Provider value={value}>
+  <div>{children}</div>
+ </WidgetContext.Provider>
 );
